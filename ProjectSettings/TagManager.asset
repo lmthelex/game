@@ -3,16 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Logica Chamo
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Monigote
+  - 
   - Water
   - UI
-  - ladrillos
+  - 
   - 
   - 
   - 
