@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovie : MonoBehaviour
 {
     public float runSpeed = 2;  // velocidad 
-    public float jumSpeed = 3;
+    public float jumSpeed = 3.5f;
     Rigidbody2D rb2d;   //hace referencia al rigibody
 
     //variables para los saltos

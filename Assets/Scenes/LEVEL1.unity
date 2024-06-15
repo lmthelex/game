@@ -9983,7 +9983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 2
-  jumSpeed: 2.5
+  jumSpeed: 3.5
   betterJump: 1
   fallMultiplier: 1
   lowJumMultiplier: 0.1
