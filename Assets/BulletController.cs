@@ -8,6 +8,7 @@ public class BulletControllerScript : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float damageDealt;
     [SerializeField] GameObject gun;
+    int lifetime;
     void Start()
     {
 
@@ -17,5 +18,6 @@ public class BulletControllerScript : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
+ 
     }
 }
