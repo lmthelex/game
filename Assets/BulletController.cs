@@ -7,10 +7,10 @@ public class BulletControllerScript : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float damageDealt;
-    [SerializeField] private GameObject gun;
+    [SerializeField] GameObject gun;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
