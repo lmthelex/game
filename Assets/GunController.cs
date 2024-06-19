@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class ShootControlerScript : MonoBehaviour
 {
-
     [SerializeField] private Transform shootController;
-    [SerializeField] private Transform bullet;
+    [SerializeField] private GameObject bullet; // Cambiado a GameObject
     [SerializeField] private Camera camera1;
-    SpriteRenderer spriteRenderer;
-    // Update is called once per frame
+    private SpriteRenderer spriteRenderer;
+    private int bulletCount = 0; // Contador de balas
+
     private void Start()
     {
-        spriteRenderer= GetComponent<SpriteRenderer>();  
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
+
     void Update()
     {
         SwitchAngle();
@@ -29,6 +30,7 @@ public class ShootControlerScript : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, angle);
         spriteRenderer.flipY = angle >= 90 && angle <= 270;
     }
+
     float GetMouseAngle()
     {
         Vector3 mousePosition = camera1.ScreenToWorldPoint(Input.mousePosition);
@@ -38,8 +40,15 @@ public class ShootControlerScript : MonoBehaviour
         float angle = (Vector3.SignedAngle(Vector3.right, mouseDirection, Vector3.forward) + 360) % 360;
         return angle;
     }
+
     void ShootBullet()
     {
-        Instantiate(bullet, shootController.position, shootController.rotation);
+        GameObject bullet1 = Instantiate(bullet, shootController.position, shootController.rotation);
+        GameObject bulletInstance = bullet1;
+        bulletCount++;
+
+        Destroy(bulletInstance, 5f);
+        bulletCount = 0; 
+        
     }
 }
