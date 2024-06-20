@@ -390,5 +390,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootController: {fileID: 2955014714320867056}
-  bullet: {fileID: 0}
+  bullet: {fileID: 7250230060852783, guid: 996518ede66d3df4c889272da5cd1b6b, type: 3}
   camera1: {fileID: 0}
