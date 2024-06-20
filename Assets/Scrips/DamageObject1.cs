@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 public class Daño : MonoBehaviour
 {
-    private int collisionCount = 0; // Contador de colisiones
+    // Contador de colisiones
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -14,6 +14,7 @@ public class Daño : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+    private int collisionCount = 0;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
